@@ -18,7 +18,7 @@ type AboutCarouselProps = {
 
 const AboutCarousel: React.FC<AboutCarouselProps> = ({ slides }) => {
   return (
-    <div className="w-full pb-12 pt-6 flex flex-col items-center">
+    <div id="TopPicks" className="w-full pb-12 pt-6 flex flex-col items-center">
       <div className="w-[95%] sm:w-[80%] md:w-[60%]">
         <Carousel
           autoPlay
@@ -30,7 +30,10 @@ const AboutCarousel: React.FC<AboutCarouselProps> = ({ slides }) => {
           stopOnHover
         >
           {slides.map((slide, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center bg-secondary justify-center gap-8 h-[70vh] px-4">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center bg-secondary justify-center gap-8 h-[70vh] px-4"
+            >
               {/* Text Content */}
               <div className="flex flex-col items-start text-left gap-4 w-full md:w-1/3">
                 <h1 className="text-3xl sm:text-4xl font-bold text-black">
